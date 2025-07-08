@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+}
+
+.card {
+    width: 300px;
+    height: 370px;
+    border-radius: 20px;
+    background: url("./dev1.jpg") center center no-repeat;
+    background-size: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.85s ease, background-size 0.85s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card:hover {
+    background: url("./dev2.jpg") left center no-repeat;
+    background-size: 600px;
+}
+
+.card.alt {
+    background: url("./dev2.jpg") center center no-repeat;
+    background-size: 300px;
+}
+
+.card.alt:hover {
+    background: url("./dev1.jpg") right center no-repeat;
+    background-size: 600px;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #aaa;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.card .content {
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .content {
+    opacity: 1;
+}
+
+.card .content h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card .icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card .icons i {
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card .icons i:hover {
+    transform: scale(1.2);
+}
+
+.credit {
+    margin-top: 40px;
+    color: #ffb347;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #222, 0 0 2px #fff;
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+    animation: fadeInCredit 2s ease;
+}
+
+@keyframes fadeInCredit {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
